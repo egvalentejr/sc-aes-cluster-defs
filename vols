@@ -1,0 +1,26 @@
+[volume home]
+VOLUME_ID = vol-5a9a601e
+MOUNT_PATH = /home
+[volume home_c3]
+VOLUME_ID = vol-f4bb82b0
+MOUNT_PATH = /home
+[volume home_c2]
+VOLUME_ID = vol-ab2986ef
+MOUNT_PATH = /home
+[volume home_c1]
+VOLUME_ID = vol-8f60c1cb 
+MOUNT_PATH = /home
+[volume home_aes]
+VOLUME_ID = vol-f5645fb1
+MOUNT_PATH = /home
+[volume home_khoav2]
+VOLUME_ID = vol-7eabae3a
+MOUNT_PATH = /home
+[volume common_40GB]
+VOLUME_ID = vol-beb1a1fa
+MOUNT_PATH = /common
+
+[volume i04dot_common_40GB]
+VOLUME_ID = vol-9ee815d9
+MOUNT_PATH = /common
+

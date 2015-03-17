@@ -1,0 +1,101 @@
+################################
+## Defining Cluster Templates ##
+################################
+# Sections starting with "cluster" represent a cluster template. These
+# "templates" are a collection of settings that define a single cluster
+# configuration and are used when creating and configuring a cluster. You can
+# change which template to use when creating your cluster using the -c option
+# to the start command:
+#
+#     $ starcluster start -c mediumcluster mycluster
+#
+# If a template is not specified then the template defined by DEFAULT_TEMPLATE
+# in the [global] section above is used. Below is the "default" template named
+# "smallcluster". You can rename it but dont forget to update the
+# DEFAULT_TEMPLATE setting in the [global] section above. See the next section
+# on defining multiple templates.
+
+[cluster aes]
+KEYNAME = aes-scidb-SC
+CLUSTER_SIZE = 200
+CLUSTER_USER = easadmin
+CLUSTER_SHELL = bash
+NODE_IMAGE_ID = ami-ec29bc84
+NODE_INSTANCE_TYPE = c3.4xlarge
+SUBNET_ID=subnet-20e5f866
+PUBLIC_IPS=True
+DISABLE_QUEUE=True
+VOLUMES = home_c3
+DNS_PREFIX = True
+#PLUGINS = createusers, tagger #, pkginstaller
+
+[cluster ubuntu1404]
+KEYNAME = aes-scidb-SC
+CLUSTER_SIZE = 4
+CLUSTER_USER = easadmin
+CLUSTER_SHELL = bash
+NODE_IMAGE_ID = ami-826b28ea 
+NODE_INSTANCE_TYPE = r3.2xlarge
+SUBNET_ID=subnet-20e5f866
+PUBLIC_IPS=True
+DISABLE_QUEUE=True
+VOLUMES = home_khoav2
+DNS_PREFIX = True
+#PLUGINS = createusers #tagger , pkginstaller
+
+[cluster centos65]
+KEYNAME = aes-scidb-SC
+CLUSTER_SIZE = 4
+CLUSTER_USER = easadmin
+CLUSTER_SHELL = bash
+NODE_IMAGE_ID = ami-5e7a3936
+NODE_INSTANCE_TYPE = r3.2xlarge
+SUBNET_ID=subnet-20e5f866
+PUBLIC_IPS=True
+DISABLE_QUEUE=True
+#VOLUMES = home_aes
+DNS_PREFIX = True
+#PLUGINS = createusers #tagger , pkginstaller
+
+[cluster centos64_test]
+KEYNAME = aes-scidb-SC
+CLUSTER_SIZE = 2
+CLUSTER_USER = scidb
+CLUSTER_SHELL = bash
+NODE_IMAGE_ID = ami-3c83d354
+NODE_INSTANCE_TYPE = t2.small
+SUBNET_ID=subnet-20e5f866
+PUBLIC_IPS=True
+DISABLE_QUEUE=True
+DNS_PREFIX = True
+#VOLUMES = opt_local
+PLUGINS = create_evalente_user #tagger , pkginstaller
+
+[cluster centos64_i04dft]
+KEYNAME = aes-scidb-SC
+CLUSTER_SIZE = 4
+CLUSTER_USER = scidb
+CLUSTER_SHELL = bash
+NODE_IMAGE_ID = ami-2488d84c
+NODE_INSTANCE_TYPE = r3.2xlarge
+SUBNET_ID=subnet-20e5f866
+PUBLIC_IPS=True
+DISABLE_QUEUE=True
+DNS_PREFIX = True
+VOLUMES = common_40GB
+PLUGINS = createfeketeuser, i04dft_tagger 
+
+[cluster centos64_i04dot]
+KEYNAME = aes-scidb-SC
+CLUSTER_SIZE = 4
+CLUSTER_USER = scidb
+CLUSTER_SHELL = bash
+NODE_IMAGE_ID = ami-2488d84c
+NODE_INSTANCE_TYPE = r3.2xlarge
+SUBNET_ID=subnet-20e5f866
+PUBLIC_IPS=True
+DISABLE_QUEUE=True
+DNS_PREFIX = True
+VOLUMES = i04dot_common_40GB
+PLUGINS = createfeketeuser, create_oloso_user, i04dot_tagger
+

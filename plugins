@@ -1,0 +1,57 @@
+# The IPCluster plugin configures a parallel IPython cluster with optional
+# web notebook support. This allows you to run Python code in parallel with low
+# latency message passing via ZeroMQ.
+# [plugin ipcluster]
+# SETUP_CLASS = starcluster.plugins.ipcluster.IPCluster
+# # Enable the IPython notebook server (optional)
+# ENABLE_NOTEBOOK = True
+# # Set a password for the notebook for increased security
+# # This is optional but *highly* recommended
+# NOTEBOOK_PASSWD = a-secret-password
+# # Set a custom directory for storing/loading notebooks (optional)
+# NOTEBOOK_DIRECTORY = /path/to/notebook/dir
+# # Set a custom packer. Must be one of 'json', 'pickle', or 'msgpack'
+# # This is optional.
+# PACKER = pickle
+[plugin tagger]
+setup_class = tagger.TaggerPlugin
+# add as many key=value pairs as you like separated by ','
+tags = Cluster-ID=g4v1
+
+[plugin pkginstaller]
+setup_class = starcluster.plugins.pkginstaller.PackageInstaller
+packages = s3cmd
+
+[plugin createusers]
+setup_class = starcluster.plugins.users.CreateUsers
+usernames = jrushing, kskuo, aoloso, khoadoan
+
+[plugin createscidbuser]
+setup_class = starcluster.plugins.users.CreateUsers
+usernames = scidb
+
+[plugin getallips]
+setup_class = getallips.GetAllIPs
+
+[plugin i04dft_tagger]
+setup_class = tagger.TaggerPlugin
+# add as many key=value pairs as you like separated by ','
+tags = Cluster-ID=i04dft
+
+[plugin createfeketeuser]
+setup_class = starcluster.plugins.users.CreateUsers
+usernames = gfekete
+
+[plugin i04dot_tagger]
+setup_class = tagger.TaggerPlugin
+# add as many key=value pairs as you like separated by ','
+tags = Cluster-ID=i04dot
+
+[plugin create_oloso_user]
+setup_class = starcluster.plugins.users.CreateUsers
+usernames = aoloso
+
+[plugin create_evalente_user]
+setup_class = starcluster.plugins.users.CreateUsers
+usernames = evalente
+

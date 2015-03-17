@@ -1,0 +1,14 @@
+#############################################
+## AWS Credentials and Connection Settings ##
+#############################################
+# Use this template to fill in the missing information required to 
+# interact with AWS services and save it as the file "keys"
+[aws info]
+AWS_ACCESS_KEY_ID = ?
+AWS_SECRET_ACCESS_KEY = ? 
+AWS_USER_ID= ? 
+###########################
+### Defining EC2 Keypairs ##
+############################
+[key <entername>]
+KEY_LOCATION=~/.ssh/<entername>.pem
