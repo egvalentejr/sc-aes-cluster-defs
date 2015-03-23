@@ -99,3 +99,19 @@ DNS_PREFIX = True
 VOLUMES = i04dot_common_40GB
 PLUGINS = createfeketeuser, create_oloso_user, i04dot_tagger
 
+[cluster centos64_i32dft]
+KEYNAME = aes-scidb-SC
+CLUSTER_SIZE = 32
+CLUSTER_USER = scidb
+CLUSTER_SHELL = bash
+NODE_IMAGE_ID = ami-baac8ed2
+NODE_INSTANCE_TYPE = r3.2xlarge
+MASTER_IMAGE_ID = ami-7a86a412
+MASTER_INSTANCE_TYPE = r3.2xlarge
+SUBNET_ID=subnet-20e5f866
+PUBLIC_IPS=True
+DISABLE_QUEUE=True
+DNS_PREFIX = True
+VOLUMES = i32dft_common_40GB
+PLUGINS = create_all_users, i32dft_tagger
+

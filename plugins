@@ -51,7 +51,16 @@ tags = Cluster-ID=i04dot
 setup_class = starcluster.plugins.users.CreateUsers
 usernames = aoloso
 
+[plugin create_all_users]
+setup_class = starcluster.plugins.users.CreateUsers
+usernames = aoloso, kskuo, gfekete
+
 [plugin create_evalente_user]
 setup_class = starcluster.plugins.users.CreateUsers
 usernames = evalente
+
+[plugin i32dft_tagger]
+setup_class = tagger.TaggerPlugin
+# add as many key=value pairs as you like separated by ','
+tags = Cluster-ID=i30dft
 

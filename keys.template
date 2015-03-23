@@ -3,6 +3,7 @@
 #############################################
 # Use this template to fill in the missing information required to 
 # interact with AWS services and save it as the file "keys"
+# or create a "keys" symlink to the file elsewhere in the system
 [aws info]
 AWS_ACCESS_KEY_ID = ?
 AWS_SECRET_ACCESS_KEY = ? 

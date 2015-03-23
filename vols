@@ -24,3 +24,7 @@ MOUNT_PATH = /common
 VOLUME_ID = vol-9ee815d9
 MOUNT_PATH = /common
 
+[volume i32dft_common_40GB]
+VOLUME_ID = vol-7370d834
+MOUNT_PATH = /common
+
