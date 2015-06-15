@@ -115,3 +115,16 @@ DNS_PREFIX = True
 VOLUMES = i32dft_common_40GB
 PLUGINS = create_all_users, i32dft_tagger
 
+[cluster centos64_i04ddt]
+KEYNAME = aes-scidb-SC
+CLUSTER_SIZE = 4
+CLUSTER_USER = cloudera
+CLUSTER_SHELL = bash
+NODE_IMAGE_ID = ami-2488d84c
+NODE_INSTANCE_TYPE = r3.2xlarge
+SUBNET_ID=subnet-20e5f866
+PUBLIC_IPS=True
+DISABLE_QUEUE=True
+DNS_PREFIX = True
+PLUGINS = create_doan_user, i04ddt_tagger
+
