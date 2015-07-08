@@ -62,11 +62,15 @@ usernames = evalente
 [plugin i32dft_tagger]
 setup_class = tagger.TaggerPlugin
 # add as many key=value pairs as you like separated by ','
-tags = Cluster-ID=i30dft
+tags = Cluster-ID=i32dft
 
 [plugin create_doan_user]
 setup_class = starcluster.plugins.users.CreateUsers
 usernames = kdoan
+
+[plugin create_rushing_user]
+setup_class = starcluster.plugins.users.CreateUsers
+usernames = jrushing
 
 [plugin i04ddt_tagger]
 setup_class = tagger.TaggerPlugin
