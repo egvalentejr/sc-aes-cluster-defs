@@ -2,6 +2,8 @@
 # Script to create a new user account for this starcluster server
 # Requires that the current user have a .starcluster directory with a config.compact file
 # as template for the new user's starcluster config file.
+# Also requires that the current user have sudo privileges
+
 u=$1
 c=$2
 pkey=$3
@@ -11,7 +13,7 @@ if [ 1"$u"1 == 11 ] ; then
   exit 1
 fi
 sudo useradd -m -c "$c" $u
-cp .starcluster/config.compact /tmp/starcluster_config
+cp ~/.starcluster/config.compact /tmp/starcluster_config
 chmod 666 /tmp/starcluster_config
 sudo su - $u -c "starcluster"
 sudo su - $u -c "cp /tmp/starcluster_config ~/.starcluster/config"
