@@ -4,6 +4,9 @@
 # as template for the new user's starcluster config file.
 # Also requires that the current user have sudo privileges
 
+# Note: This script does not make the cluster key available to the user
+# For the moment this will have to be added manually
+
 u=$1
 c=$2
 pkey=$3
@@ -30,3 +33,6 @@ if [ 1"$pkey"1 != 11 ] ; then
   rm /tmp/temp_$pkey
 fi
 
+echo "Reminder: add the cluster key to the user's .ssh directory"
+echo "Without it the user maybe able to list clusters, but not ssh"
+echo "into them"
